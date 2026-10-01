@@ -1,0 +1,101 @@
+{
+  "name": "Pagaré Vivo - Gestión de pagarés para abogados",
+  "short_name": "Pagaré Vivo",
+  "description": "Expedientes, clientes, pagarés y calculadora de interés moratorio con alerta de prescripción.",
+  "lang": "es-MX",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "id": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f4f6fa",
+  "theme_color": "#12213b",
+  "categories": [
+    "business",
+    "productivity",
+    "legal"
+  ],
+  "icons": [
+    {
+      "src": "img/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "img/screenshot-escritorio.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Portada de Pagaré Vivo en escritorio"
+    },
+    {
+      "src": "img/screenshot-calculadora.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Calculadora de interés moratorio y prescripción"
+    },
+    {
+      "src": "img/screenshot-movil.png",
+      "sizes": "780x1688",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Portada de Pagaré Vivo en el teléfono"
+    },
+    {
+      "src": "img/screenshot-movil-calculadora.png",
+      "sizes": "780x1688",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Calculadora en el teléfono"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Calculadora de pagarés",
+      "short_name": "Calculadora",
+      "url": "./index.html#calculadora",
+      "icons": [
+        {
+          "src": "img/icon-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Solicitar demostración",
+      "short_name": "Contacto",
+      "url": "./index.html#contacto",
+      "icons": [
+        {
+          "src": "img/icon-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

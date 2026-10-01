@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pagaré Vivo | Gestión de pagarés para despachos de abogados</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="Plataforma para abogados: expedientes, clientes, deudas, pagarés imprimibles y calculadora de interés moratorio con alerta de prescripción.">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+  <header>
+    <div class="wrap bar">
+      <a class="logo" href="#inicio" aria-label="Pagaré Vivo, inicio">⚖ Pagaré<span>Vivo</span></a>
+      <input type="checkbox" id="menu" aria-label="Abrir menú">
+      <label class="burger" for="menu" aria-hidden="true">☰</label>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="#funciones">Funciones</a></li>
+          <li><a href="#proceso">Cómo funciona</a></li>
+          <li><a href="#calculadora">Calculadora</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#video">Video</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap">
+        <div>
+          <h1>Cada pagaré bajo control, desde el expediente hasta el cobro.</h1>
+          <p>Plataforma para despachos jurídicos que organiza expedientes, clientes y deudas, imprime pagarés listos para firma y calcula al instante cuánto se debe y cuánto tiempo queda para cobrar.</p>
+          <div class="acts">
+            <a class="btn" href="#calculadora">Probar la calculadora</a>
+            <a class="btn ghost" href="#video">Ver cómo funciona</a>
+          </div>
+        </div>
+        <img src="img/balanza.jpg" alt="Ilustración de una balanza de la justicia" width="800" height="600">
+      </div>
+    </section>
+
+    <section id="funciones">
+      <div class="wrap">
+        <h2>Lo que el despacho ya hace, ahora más claro</h2>
+        <p class="lead">Conservamos las funciones del sistema original y las presentamos con una interfaz pensada para trabajar horas sin cansar la vista.</p>
+        <div class="grid">
+          <article class="card"><h3>Expedientes</h3><p>Cada abogado crea y consulta sus propios expedientes con un código único, ordenados por fecha.</p></article>
+          <article class="card"><h3>Clientes y deudas</h3><p>Dentro de cada expediente se registran los clientes, los montos adeudados y su historial.</p></article>
+          <article class="card"><h3>Pagarés imprimibles</h3><p>Genera el documento con formato limpio para imprimir y firmar en segundos.</p></article>
+          <article class="card"><h3>Permisos por rol</h3><p>El administrador autoriza o retira el acceso a cada abogado con un solo botón.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" style="background:#fff">
+      <div class="wrap">
+        <h2>Del alta al pagaré en cuatro pasos</h2>
+        <p class="lead">El flujo sigue el orden real del trabajo de un abogado.</p>
+        <ol class="steps">
+          <li><b>Inicia sesión</b>Accede con tu cuenta; si aún no estás autorizado, puedes consultar pero no crear.</li>
+          <li><b>Abre un expediente</b>Registra el código del caso, por ejemplo EXP-2026-A.</li>
+          <li><b>Agrega cliente y deuda</b>Captura los datos y el monto adeudado.</li>
+          <li><b>Imprime el pagaré</b>Descarga o imprime el documento listo para firma.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="calc" id="calculadora">
+      <div class="wrap">
+        <h2>Pagaré Vivo: calcula lo que se debe y cuánto tiempo queda</h2>
+        <p class="lead">La novedad de esta versión. Captura los datos del pagaré y obtén el interés moratorio, el total actualizado y una alerta de prescripción.</p>
+        <div class="calc-box">
+          <div>
+            <label for="monto">Monto del pagaré (MXN)</label>
+            <input id="monto" type="number" min="0" step="100" value="50000">
+            <label for="venc">Fecha de vencimiento</label>
+            <input id="venc" type="date">
+            <label for="tasa">Tasa moratoria mensual (%)</label>
+            <input id="tasa" type="number" min="0" step="0.1" value="3">
+          </div>
+          <div class="res" aria-live="polite">
+            <dl>
+              <dt>Días de mora</dt><dd id="dias">0</dd>
+              <dt>Interés moratorio</dt><dd id="int">$0.00</dd>
+            </dl>
+            <p>Total a reclamar</p>
+            <p class="total" id="tot">$0.00</p>
+            <p style="margin-top:.8rem"><span class="badge" id="est">Al corriente</span></p>
+            <div class="meter" role="img" aria-label="Avance hacia la prescripción"><i id="bar"></i></div>
+            <small id="presc">Prescripción estimada a 3 años del vencimiento.</small>
+          </div>
+        </div>
+        <p style="margin-top:1rem;color:#cdd6e4;font-size:.85rem">Cálculo de interés simple con fines ilustrativos; la tasa aplicable y los plazos deben confirmarse con el pagaré y la ley vigente.</p>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="wrap">
+        <h2>Galería</h2>
+        <p class="lead">Un vistazo a los módulos del sistema.</p>
+        <div class="gallery">
+          <figure><img src="img/expedientes.jpg" alt="Carpetas de expedientes" loading="lazy"><figcaption>Expedientes ordenados</figcaption></figure>
+          <figure><img src="img/clientes.jpg" alt="Tres siluetas de clientes" loading="lazy"><figcaption>Directorio de clientes</figcaption></figure>
+          <figure><img src="img/pagare.jpg" alt="Documento de pagaré con sello" loading="lazy"><figcaption>Pagaré listo para firma</figcaption></figure>
+          <figure><img src="img/vencimientos.jpg" alt="Calendario con fecha de vencimiento marcada" loading="lazy"><figcaption>Control de vencimientos</figcaption></figure>
+          <figure><img src="img/seguridad.jpg" alt="Escudo con palomita de verificación" loading="lazy"><figcaption>Acceso autorizado por rol</figcaption></figure>
+          <figure><img src="img/balanza.jpg" alt="Balanza de la justicia" loading="lazy"><figcaption>Justicia con orden</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="video" id="video" style="background:#fff">
+      <div class="wrap">
+        <h2>Míralo en acción</h2>
+        <p class="lead">Un recorrido de 10 segundos por el flujo completo.</p>
+        <video controls preload="metadata" poster="video/poster.jpg">
+          <source src="video/demo.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto" style="background:var(--paper)">
+      <div class="wrap">
+        <h2>Solicita una demostración</h2>
+        <p class="lead">Cuéntanos del tamaño de tu despacho y te respondemos.</p>
+        <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Solicitud enviada'">
+          <label for="n">Nombre</label><input id="n" required>
+          <label for="c">Correo</label><input id="c" type="email" required>
+          <label for="m">Mensaje</label><textarea id="m"></textarea>
+          <button class="btn" type="submit">Enviar solicitud</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div><strong style="font-family:var(--serif);color:#fff;font-size:1.2rem">⚖ PagaréVivo</strong><p>Gestión de pagarés para despachos jurídicos.</p></div>
+        <ul class="social" aria-label="Redes sociales">
+          <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener">X</a></li>
+          <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+      <p class="copy">© 2026 Pagaré Vivo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  </body>
+  </html>
